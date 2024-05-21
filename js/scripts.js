@@ -11,7 +11,12 @@ pokemonList(
         height:3,
         types: ["water", "speed"]
 },
+    {
+        name: "Butterfree",
+        height:2,
+        type: "bug",
 
+    }
 
     );
 
