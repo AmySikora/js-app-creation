@@ -1,6 +1,5 @@
-let pokemonList = [];
-
-pokemonList(
+let pokemonList = 
+[
     {
         name: "Balbasure", 
         height:7, 
@@ -17,5 +16,5 @@ pokemonList(
         type: "bug"
     }
 
-    );
+];
 
