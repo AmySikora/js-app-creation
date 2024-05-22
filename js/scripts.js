@@ -14,7 +14,7 @@ pokemonList(
     {
         name: "Butterfree",
         height:2,
-        type: "bug",
+        type: "bug"
 
     }
 
