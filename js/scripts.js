@@ -13,7 +13,7 @@ let pokemonList =
     {
         name: "Butterfree",
         height:2,
-        type: "bug"
+        types: ['bug']
     }
 
 ];
