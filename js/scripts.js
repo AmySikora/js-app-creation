@@ -1,5 +1,7 @@
+//created a list of pokemens//
 let pokemonList = 
 [
+    //added an array of pokemon objects//
     {
         name: "Balbasure", 
         height:7, 
