@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c6e1f9;
+    color: #494848;
+    text-align: center;
+    margin: 0; 
+    padding: 30px
+}
+
+.pokemon-name {
+    font-size: 1.5em;
+    color: 0073e6; 
+}
+
+.pokemon.height {
+    font-size: 1em;
+    color: #989595;
+}
