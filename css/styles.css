@@ -7,9 +7,22 @@ body {
     padding: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
- .page-header__item {
-    background-color:transparent;
- }
+
+.page-header {
+    background-color: rgba(255, 255, 255, 0); 
+    padding: 10px;
+    text-align: center;
+}
+
+.page-header__item {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.logo-link {
+    display: inline-block;
+}
+
 .pokemon-name {
     font-size: 1.5em;
     color: 0073e6; 
