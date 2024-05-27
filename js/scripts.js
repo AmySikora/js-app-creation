@@ -29,6 +29,12 @@ for (let i = 0; i < pokemonList.length; i++) {
 //adding code to highlight special pokemon//
 
 
+if (pokemon.height > 3.5) {
+    document.write('<p class="highlight">This is a big Pokémon!!</p>');
+} 
+
+  
+
 
 
 
