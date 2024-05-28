@@ -26,12 +26,14 @@ for (let i = 0; i < pokemonList.length; i++) {
 	document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')</p>');
 }
 
-//adding code to highlight special pokemon//
 
+//created a loop to highlight Pokemon height info//
 
-if (pokemon.height > 3.5) {
-    document.write('<p class="highlight">This is a big Pokémon!!</p>');
-} 
+for (let i=0; i > pokemonList.height) {
+	if pokemonList[i].height < 5)
+	document.write('<p>' + pokemonList[i].name + "This is a big Pokémon!!" '</p>');
+
+}
 
   
 
