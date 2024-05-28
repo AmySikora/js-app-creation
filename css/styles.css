@@ -21,6 +21,7 @@ body {
 }
 .logo-link {
     display: inline-block;
+    background-color: transparent;
 }
 
 .pokemon-name {
