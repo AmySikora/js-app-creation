@@ -20,19 +20,24 @@ const pokemonList =
 ];
 //created a for loop to write pokemon names and height to index.html//
 for (let i = 0; i < pokemonList.length; i++) {
-    if (pokemonList[i].height > 5) {
       document.write(
-        "<p>" + pokemonList[i].name + " - This is a big Pokémon!!" + "</p>",
-      );
-    }
-    document.write(
-      "<p>" +
-        pokemonList[i].name +
+        "<p>" + 
+        pokemonList[i].name + 
         " (height: " +
         pokemonList[i].height +
-        ")</p>",
-    );
-  }
+        ")" +
+        (pokemonList[i].height > 5 ? " - This is a big Pokémon!!" : "") +
+         "</p>"
+      );
+    }
+    //document.write(
+      //"<p>" +
+       // pokemonList[i].name +
+       // " (height: " +
+       // pokemonList[i].height +
+      //  ")</p>",
+  //  );
+ // }
 
 //alternnative solution
 //pokemonList.forEach((pokemon) => {
