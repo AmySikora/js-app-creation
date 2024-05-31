@@ -1,5 +1,5 @@
 //created a list of pokemens//
-let pokemonList = 
+const pokemonList = 
 [
     //added an array of pokemon objects//
     {
@@ -23,22 +23,16 @@ let pokemonList =
 //created a for loop to write pokemon names and height to index.html//
 
 for (let i = 0; i < pokemonList.length; i++) {
-	document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')</p>');
+	document.write(
+        "<p>" + pokemonList[i].name +  " - This is a big Pokémon!!" + "</p>");
 }
-
-
 //created a loop to highlight Pokemon height info//
+    document.write(
+        "<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ")</p>",
+    );
 
-for (let i=0; i < pokemonList.length; i++) {
-	if (pokemonList[i].height > 5) {
-        document.write('<p>' + pokemonList[i].name + " - This is a big Pokémon!!" + '</p>');
-
-    }
-}
 //added document write to add text to highlight the large pokémon//
-document.write(
-    "<p>" = pokemonList[i].name + " (height: " + pokemonList[i].height + ")</p>",
-);
+
 
 
 
