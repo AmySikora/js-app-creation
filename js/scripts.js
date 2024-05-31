@@ -29,13 +29,17 @@ for (let i = 0; i < pokemonList.length; i++) {
 
 //created a loop to highlight Pokemon height info//
 
-for (let i=0; i > pokemonList.length; i++) {
+for (let i=0; i < pokemonList.length; i++) {
 	if (pokemonList[i].height > 5) {
         document.write('<p>' + pokemonList[i].name + " - This is a big Pokémon!!" + '</p>');
 
     }
 }
-  
+//added document write to add text to highlight the large pokémon//
+document.write(
+    "<p>" = pokemonList[i].name + " (height: " + pokemonList[i].height + ")</p>",
+);
+
 
 
 
