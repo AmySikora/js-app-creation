@@ -1,3 +1,20 @@
+//wrapped functions in IFFE//
+let pokemonRepository = (function () {
+  let pokemonList = []; 
+  
+  function add(pokemon) {
+      pokemonList.push(pokemon);
+    }
+
+    function getAll() {
+      return pokemonList;
+   }
+
+   return {
+    add: add,
+    getAll: getAll
+    };
+})();
 //created a list of pokemens//
 const pokemonList = 
 [
@@ -18,18 +35,19 @@ const pokemonList =
         types: ['bug']
     }
 ];
-//created a for loop to write pokemon names and height to index.html//
-for (let i = 0; i < pokemonList.length; i++) {
+//created a forEach loop to write pokemon names and height to index.html//
+    pokemonList.forEach(function(pokemon) {
       document.write(
         "<p>" + 
-        pokemonList[i].name + 
+        pokemon.name + 
         " (height: " +
-        pokemonList[i].height +
+        pokemon.height +
+         ", types: " +
+        pokemon.types.join(", ") + 
         ")" +
-        (pokemonList[i].height > 5 ? " - This is a big Pokémon!!" : "") +
          "</p>"
       );
-    }
+    });
     //document.write(
       //"<p>" +
        // pokemonList[i].name +
