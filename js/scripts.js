@@ -15,7 +15,7 @@ let pokemonRepository = (function () {
     getAll: getAll
     };
 })();
-//created a list of pokemens//
+//created a list of pokemons//
 const pokemonList = 
 [
     //added an array of pokemon objects//
@@ -23,7 +23,7 @@ const pokemonList =
         name: "Bulbasaur", 
         height: 7, 
         types: ["grass", "posion"]
-        
+
 }, 
     {
         name: "Eevee", 
