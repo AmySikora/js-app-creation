@@ -1,23 +1,10 @@
 //wrapped functions in IFFE//
-let pokemonRepository = (function () {
-  let pokemonList = []; 
+//const pokemonRepository = (function () {
+  //let pokemonList = []; 
   
-  function add(pokemon) {
-      pokemonList.push(pokemon);
-    }
-
-    function getAll() {
-      return pokemonList;
-   }
-
-   return {
-    add: add,
-    getAll: getAll
-    };
-})();
 //created a list of pokemons//
-const pokemonList = 
-[
+const pokemonRepository = (function () {
+const pokemonList = [
     //added an array of pokemon objects//
     {
         name: "Bulbasaur", 
@@ -36,19 +23,43 @@ const pokemonList =
         types: ['bug']
     }
 ];
-//created a forEach loop to write pokemon names and height to index.html//
-    pokemonList.forEach(function(pokemon) {
-      document.write(
-        "<p>" + 
-        pokemon.name + 
-        " (height: " +
-        pokemon.height +
-         ", types: " +
-        pokemon.types.join(", ") + 
-        ")" +
-         "</p>"
-      );
-    });
+function add(pokemon) {
+//One way to check if its the object you need.
+if(typeof pokemon == "object" && "name" in pokemon && "height" in pokemon && "types" in pokemon && Array.isArray(pokemon.types)){
+  pokemonList.push(pokemon);
+  return
+}
+//if it fails 
+console.log("failed");
+}
+
+function getAll() {
+return pokemonList;
+}
+
+return {
+add: add,
+getAll: getAll
+};
+})();
+
+pokemonRepository.add({
+  name: "Pikachu",
+  height: 2,
+  types: ['bug']
+})
+
+//shouldnot be added
+pokemonRepository.add(    {
+  name: "Butterfree3",
+  height: 2,
+  // types: ['bug']
+})
+
+pokemonRepository.getAll().forEach(function(pokemon) {
+  document.write(`<p>${pokemon.name} (height: ${pokemon.height}, types: ${pokemon.types.join(", ")})</p>`
+  );
+});
     //document.write(
       //"<p>" +
        // pokemonList[i].name +
