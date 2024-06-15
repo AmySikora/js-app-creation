@@ -56,10 +56,13 @@ pokemonRepository.add(    {
   // types: ['bug']
 })
 
-pokemonRepository.getAll().forEach(function(pokemon) {
-  document.write(`<p>${pokemon.name} (height: ${pokemon.height}, types: ${pokemon.types.join(", ")})</p>`
-  );
-});
+pokemonRepository.getAll().forEach(element = document.querySelector('ul')) ;
+  let listItem = document.createElement('li');
+  let button = document.createElement('button') ;
+    button.innerText = pokemonList('name');
+    classList.add(button.classList.add())
+
+
     //document.write(
       //"<p>" +
        // pokemonList[i].name +

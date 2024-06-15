@@ -33,3 +33,9 @@ body {
     list-style-type: none;
     padding: 0;
 }
+.button {
+    background-color:rgba(230, 226, 226, 0);
+    color: rgb(72, 48, 2); 
+    text-align: center;
+
+}
