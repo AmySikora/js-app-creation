@@ -1,41 +1,37 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #c6e1f9;
-    color: #494848;
-    text-align: center;
-    margin: 0; 
-    padding: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.page-header {
-    background-color: rgba(255, 255, 255, 0); 
-    padding: 10px;
-    text-align: center;
-}
-
-.page-header__item {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-.logo-link {
-    display: inline-block;
-    background-color: transparent;
-}
-
-.pokemon-name {
-    font-size: 1.5em;
-    color: 0073e6; 
+    justify-content: center;
+    text-align: center;  
+    border: 1px solid rgb(91, 8, 233);
+    background-color: rgb(171, 229, 241);
+    font-family: "Press Start 2P", sans-serif;
 }
 
 .pokemon-list {
-    list-style-type: none;
-    padding: 0;
+    display: flex;
+    justify-content: center;
 }
-.button {
-    background-color:rgba(230, 226, 226, 0);
-    color: rgb(72, 48, 2); 
-    text-align: center;
+
+.pokemon-list li{
+    list-style-type: none;
+} 
+
+.pokemon-card {
+    padding: 10px;
+    background-color: rgb(242, 190, 126);
+    border: 2px solid rgb(25, 25, 25);
+    border-radius: 15px;
+    box-shadow: 7px, 7px, 0px rgb(231 103 103);
+    margin: 5px 5px;
+    width: 150px;
 
 }
+
+.pokemon-card:hover{
+    cursor: pointer;
+    color: rgb(238, 206, 148);
+}
+
+.pokemon-card:active{
+    background-color: rgb(63, 63, 109);
+}
+

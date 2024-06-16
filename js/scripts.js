@@ -1,16 +1,11 @@
-//wrapped functions in IFFE//
-//const pokemonRepository = (function () {
-  //let pokemonList = []; 
-  
-//created a list of pokemons//
 const pokemonRepository = (function () {
-const pokemonList = [
-    //added an array of pokemon objects//
+      // Define the array of Pokemon objects
+  const pokemonList = [
+
     {
-        name: "Bulbasaur", 
+        name: "Bulbasaur",
         height: 7, 
         types: ["grass", "posion"]
-
 }, 
     {
         name: "Eevee", 
@@ -24,22 +19,49 @@ const pokemonList = [
     }
 ];
 function add(pokemon) {
-//One way to check if its the object you need.
-if(typeof pokemon == "object" && "name" in pokemon && "height" in pokemon && "types" in pokemon && Array.isArray(pokemon.types)){
-  pokemonList.push(pokemon);
-  return
-}
-//if it fails 
-console.log("failed");
+  if (
+    typeof pokemon === "object" &&
+    "name" in pokemon &&
+    "height" in pokemon &&
+    "types" in pokemon &&
+    Array.isArray(pokemon.types)
+  ) {
+    pokemonList.push(pokemon);
+  } else {
+    console.log("Pokemon not added");
+  }
 }
 
 function getAll() {
 return pokemonList;
 }
 
+function showDetails (pokemon) {
+  console.log(pokemon);
+}
+
+function onClick(clickedButton, pokemon) {
+  clickedButton.addEventListener('click', function (event) {
+    pokemonRepository.showDetails(pokemon);
+  });
+}
+
+function addListItem(pokemon) {
+  let pokemonListElement = document.querySelector('.pokemon-list');
+  let listItem = document.createElement('li');
+  let button = document.createElement('button');
+  button.innerText = pokemon.name;
+  button.classList.add('pokemon-card');
+  listItem.appendChild(button);
+  pokemonListElement.appendChild(listItem);
+  onClick(button, pokemon); 
+}
+
 return {
-add: add,
-getAll: getAll
+  add: add,
+  getAll: getAll,
+  showDetails: showDetails,
+  addListItem: addListItem
 };
 })();
 
@@ -54,17 +76,14 @@ pokemonRepository.add(    {
   name: "Butterfree3",
   height: 2,
   // types: ['bug']
-})
+});
 
-pokemonRepository.getAll().forEach(element = document.querySelector('ul')) ;
-  let listItem = document.createElement('li');
-  let button = document.createElement('button') ;
-    button.innerText = pokemonList('name');
-    classList.add(button.classList.add())
 
 
     //document.write(
-      //"<p>" +
+    
+    
+    //"<p>" +
        // pokemonList[i].name +
        // " (height: " +
        // pokemonList[i].height +
@@ -92,3 +111,7 @@ pokemonRepository.getAll().forEach(element = document.querySelector('ul')) ;
 
 
 
+
+
+
+ 
