@@ -15,7 +15,7 @@ const pokemonRepository = (function () {
     {
         name: "Butterfree",
         height: 2,
-        types: ['bug']
+        types: ['bug', 'flying']
     }
 ];
 function add(pokemon) {
@@ -68,7 +68,7 @@ return {
 pokemonRepository.add({
   name: "Pikachu",
   height: 2,
-  types: ['bug']
+  types: ['electric']
 })
 
 //shouldnot be added
@@ -77,7 +77,10 @@ pokemonRepository.add(    {
   height: 2,
   // types: ['bug']
 });
-
+// Initialize and add list items
+pokemonRepository.getAll().forEach(pokemon => {
+  pokemonRepository.addListItem(pokemon);
+});
 
 
     //document.write(
