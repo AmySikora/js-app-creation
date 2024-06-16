@@ -9,6 +9,7 @@ body {
 .pokemon-list {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .pokemon-list li{
@@ -28,7 +29,7 @@ body {
 
 .pokemon-card:hover{
     cursor: pointer;
-    color: rgb(238, 206, 148);
+    color: rgb(126, 11, 227);
 }
 
 .pokemon-card:active{
