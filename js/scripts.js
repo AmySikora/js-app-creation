@@ -36,6 +36,16 @@ function getAll() {
 return pokemonList;
 }
 
+function showDetails (pokemon) {
+  console.log(pokemon);
+};
+
+function onClick(clickedButton, pokemon) {
+  clickedButton.addEventListener('click', function (event) {
+  pokemonRepository.showDetails(pokemon);
+  });
+}
+
 function addListItem (pokemon) {
   let pokemonListElement = document.querySelector('.pokemon-list');
   let listItem = document.createElement('li');
@@ -64,15 +74,14 @@ pokemonRepository.getAll().forEach(function (pokemon) {
   pokemonRepository.addListItem(pokemon);
 });
 
-function showDetails (pokemon) {
-  console.log(pokemon);
-};
+//shouldnot be added
+pokemonRepository.add(    {
+  name: "Butterfree3",
+  height: 2,
+  // types: ['bug']
+});
 
-function onClick(clickedButton, pokemon) {
-  clickedButton.addEventListener('click', function (event) {
-  pokemonRepository.showDetails(pokemon);
-  });
-}
+
 //pokemonRepository.getAll().forEach(function (pokemon) {
  //let pokemonListElement = document.querySelector('.pokemon-list');
   //let listItem = document.createElement('li');
@@ -83,19 +92,6 @@ function onClick(clickedButton, pokemon) {
   //pokemonListElement.appendChild(listItem);
   //onClick(button, pokemon); 
 //});
-
-pokemonRepository.add({
-  name: "Pikachu",
-  height: 2,
-  types: ['electric']
-})
-
-//shouldnot be added
-pokemonRepository.add(    {
-  name: "Butterfree3",
-  height: 2,
-  // types: ['bug']
-});
 // Initialize and add list items
 //pokemonRepository.getAll().forEach(function (pokemon) {
   //let pokemonList = document.querySelector(".pokemon-list");
