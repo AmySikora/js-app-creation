@@ -1,38 +1,59 @@
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     text-align: center;  
     border: 1px solid rgb(91, 8, 233);
     background-color: rgb(171, 229, 241);
     font-family: "Press Start 2P", sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: rgb(25, 25, 25);
 }
 
 .pokemon-list {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+    border: 2px solid rgb(25, 25, 25);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
 }
 
-.pokemon-list li{
+.pokemon-list li {
     list-style-type: none;
 } 
 
 .pokemon-card {
-    padding: 10px;
+    padding: 20px;
     background-color: rgb(242, 190, 126);
     border: 2px solid rgb(25, 25, 25);
     border-radius: 15px;
-    box-shadow: 7px, 7px, 0px rgb(231 103 103);
-    margin: 5px 5px;
-    width: 150px;
-
+    box-shadow: 7px 7px 0px rgb(231, 103, 103);
+    margin: 5px;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.pokemon-card:hover{
+.pokemon-card:hover {
     cursor: pointer;
     color: rgb(126, 11, 227);
+    transform: translateY(-5px);
+    box-shadow: 7px 7px 10px rgb(231, 103, 103);
 }
 
-.pokemon-card:active{
+.pokemon-card:active {
     background-color: rgb(63, 63, 109);
+    transform: translateY(0);
 }
 
