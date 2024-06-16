@@ -4,17 +4,17 @@ const pokemonRepository = (function () {
 
     {
         name: "Bulbasaur",
-        height: 7, 
+        height: 0.7, 
         types: ["grass", "posion"]
 }, 
     {
         name: "Eevee", 
-        height: 3,
+        height: 0.3,
         types: ["water", "speed"]
 },
     {
         name: "Butterfree",
-        height: 2,
+        height: 0.2,
         types: ['bug', 'flying']
     }
 ];
@@ -36,6 +36,28 @@ function getAll() {
 return pokemonList;
 }
 
+function addListItem () {
+  let pokemonListElement = document.querySelector('.pokemon-list');
+  let listItem = document.createElement('li');
+  let button = document.createElement('button');
+  button.innerText = pokemon.name;
+  button.classList.add('pokemon-card');
+  listItem.appendChild(button);
+  pokemonListElement.appendChild(listItem);
+  onClick(button, pokemon); 
+};
+
+return {
+  add: add,
+  getAll: getAll,
+  addListItem: addListItem
+};
+})();
+
+console.log(pokemonRepository.getAll());
+pokemonRepository.add({ name: "Pikachu", height: 0.3, types: ["electric"]
+});
+
 function showDetails (pokemon) {
   console.log(pokemon);
 }
@@ -45,25 +67,16 @@ function onClick(clickedButton, pokemon) {
     pokemonRepository.showDetails(pokemon);
   });
 }
-//pokemonRepository.getAll().forEach(function (pokemon) {
-  //let pokemonListElement = document.querySelector('.pokemon-list');
-  //let listItem = document.createElement('li');
-  //let button = document.createElement('button');
-  //button.innerText = pokemon.name;
-  //button.classList.add('pokemon-card');
-  //listItem.appendChild(button);
- //pokemonListElement.appendChild(listItem);
-  //onClick(button, pokemon); 
-//});
-
-
-return {
-  add: add,
-  getAll: getAll,
-  showDetails: showDetails,
-  addListItem: addListItem
-};
-})();
+pokemonRepository.getAll().forEach(function (pokemon) {
+  let pokemonListElement = document.querySelector('.pokemon-list');
+  let listItem = document.createElement('li');
+  let button = document.createElement('button');
+  button.innerText = pokemon.name;
+  button.classList.add('pokemon-card');
+  listItem.appendChild(button);
+  pokemonListElement.appendChild(listItem);
+  onClick(button, pokemon); 
+});
 
 pokemonRepository.add({
   name: "Pikachu",
@@ -78,15 +91,15 @@ pokemonRepository.add(    {
   // types: ['bug']
 });
 // Initialize and add list items
-pokemonRepository.getAll().forEach(function (pokemon) {
-  let pokemonList = document.querySelector(".pokemon-list");
-  let listItem = document.createElement("li");
-  let button = document.createElement("button");
-  button.innerText= "pokemon.name";
-  button.classList.add('pokemon-card');
-  listItem.appendChild(button);
-  pokemonListElement.appendChild(listItem);
-});
+//pokemonRepository.getAll().forEach(function (pokemon) {
+  //let pokemonList = document.querySelector(".pokemon-list");
+  //let listItem = document.createElement("li");
+  //let button = document.createElement("button");
+  //button.innerText= "pokemon.name";
+  //button.classList.add('pokemon-card');
+ // listItem.appendChild(button);
+ // pokemonListElement.appendChild(listItem);
+//});
 
 
     //document.write(
