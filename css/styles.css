@@ -17,7 +17,7 @@ body {
     border: 2px solid rgb(25, 25, 25); /* Add a border to the list container */
 }
 
-/* Removes ant default syles */
+/* Removes any default syles */
 .pokemon-list li {
     list-style-type: none;
 }
