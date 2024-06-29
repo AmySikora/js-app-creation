@@ -1,38 +1,15 @@
-const pokemonRepository = (function () {
+let pokemonRepository = (function () {
       // Define the array of Pokemon objects
-  const pokemonList = [
-
-    {
-        name: "Bulbasaur",
-        height: 0.7, 
-        types: ["grass", "posion"]
-}, 
-    {
-        name: "Eevee", 
-        height: 0.3,
-        types: ["water", "speed"]
-},
-    {
-        name: "Butterfree",
-        height: 0.2,
-        types: ['bug', 'flying']
-    }
-];
-
+  let pokemonList = [];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
 // Added a new Pokemon 
 function add(pokemon) {
   if (
     typeof pokemon === "object" &&
     "name" in pokemon &&
-    "height" in pokemon &&
-    "types" in pokemon &&
-    Array.isArray(pokemon.types)
+    "detailsUrl" in pokemon
   ) {
-    pokemonList.push(pokemon);
-  } else {
-    console.log("Pokemon not added");
-  }
-}
+};
 
 // Function to get all Pokemon
 function getAll() {
@@ -61,90 +38,42 @@ function addListItem (pokemon) {
   pokemonListElement.appendChild(listItem);
   onClick(button, pokemon); 
 };
-// Retuns all 
+//Promise function
+function loadList() {
+  return fetch(apiUrl).then(function (response) {
+    return response.json();
+  }).then(function (json) {
+    json.results.forEach(function (item) {
+      let pokemon = {
+        name: item.name,
+        detailsUrl: item.url
+      };
+      add(pokemon);
+    });
+  }).catch(function (e) {
+    console.error(e);
+  })
+}
+
 return {
   add: add,
   getAll: getAll,
   addListItem: addListItem,
-  showDetails: showDetails
+  loadList: loadList
+  };
 };
-
-})();
 // Logs Pokemon in repository
 console.log(pokemonRepository.getAll());
 pokemonRepository.add({ name: "Pikachu", height: 0.3, types: ["electric"]
 });
 
 // Adds a new Pokemon to repository
-console.log(pokemonRepository.getAll());
+//console.log(pokemonRepository.getAll());
 
 // Logs all Pokemon to the repository 
+pokemonRepository.loadList().then(function() {
 pokemonRepository.getAll().forEach(function (pokemon) {
   pokemonRepository.addListItem(pokemon);
-});
+  });
 
-// This Pokemon should not be added
-pokemonRepository.add(    {
-  name: "Butterfree3",
-  height: 2,
-  // types: ['bug']
-});
-
-
-//pokemonRepository.getAll().forEach(function (pokemon) {
- //let pokemonListElement = document.querySelector('.pokemon-list');
-  //let listItem = document.createElement('li');
-  //let button = document.createElement('button');
- // button.innerText = pokemon.name;
-  //button.classList.add('pokemon-card');
-  //listItem.appendChild(button);
-  //pokemonListElement.appendChild(listItem);
-  //onClick(button, pokemon); 
-//});
-// Initialize and add list items
-//pokemonRepository.getAll().forEach(function (pokemon) {
-  //let pokemonList = document.querySelector(".pokemon-list");
-  //let listItem = document.createElement("li");
-  //let button = document.createElement("button");
-  //button.innerText= "pokemon.name";
-  //button.classList.add('pokemon-card');
- // listItem.appendChild(button);
- // pokemonListElement.appendChild(listItem);
-//});
-
-
-    //document.write(
-    
-    
-    //"<p>" +
-       // pokemonList[i].name +
-       // " (height: " +
-       // pokemonList[i].height +
-      //  ")</p>",
-  //  );
- // }
-
-//alternnative solution
-//pokemonList.forEach((pokemon) => {
-   // if (pokemon.height > 5) {
-     // document.write(
-     //   "<p>" + pokemonList.name + " - This is a big Pokémon!!" + "</p>",
-   //   );
-   // }
-  //  document.write(
-    //  "<p>" +
-   //     pokemon.name +
-   //     " (height: " +
-   //     pokemon.height +
-   //     ")</p>",
- //   );
- // }
-
-
-
-
-
-
-
-
- 
+})});
