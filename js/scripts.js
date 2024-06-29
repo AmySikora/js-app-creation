@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 // Added a new Pokemon 
 function add(pokemon) {
   if (
@@ -66,7 +66,8 @@ function loadDetails(item) {
 }
 //Show Pokemon details 
 function showDetails(item) {
-  pokemonRepository.loadDetails(item).then(function () {
+  pokemonRepository.loadDetails(item).then(function () 
+  {
     console.log(item);
   });
 }
