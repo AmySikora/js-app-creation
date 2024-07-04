@@ -63,7 +63,7 @@ function loadDetails(item) {
     console.error(e);
   });
 }
-//Show Pokemon details 
+//Show Pokemon details via modals
 function showDetails(item) {
   pokemonRepository.loadDetails(item).then(function () 
   {
