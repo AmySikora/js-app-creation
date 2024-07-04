@@ -85,3 +85,12 @@ pokemonRepository.loadList().then(function () {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
+function showModal () {
+  var modalContainer = document.querySelecter('#modal-container');
+  modalContainer.classList.add('is-visible');
+}
+
+document.querySelector('#show-modal').addEventListener('click', () => {
+  showModal();
+})
