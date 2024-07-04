@@ -101,12 +101,3 @@ css
   margin-bottom: 0;
   text-align: center;
 }
-
-#modal-container {
-    display: none;
-}
-
-#modal-container.is-visible {
-    display: block;
- 
-}
