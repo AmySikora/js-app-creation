@@ -91,7 +91,7 @@ function showDetails(item) {
     let titleElement = document.createElement('h1');
     titleElement.innerText = title;
 
-    let imageElement = daoment.createElement('img');
+    let imageElement = document.createElement('img');
     imageElement.src = imageUrl;
     
     modal.appendChild(closeButtonElement);
@@ -104,20 +104,20 @@ function showDetails(item) {
   }
   
   function hideModal() {
-    let modalContainer = documant.querySelector('modal-container');
+    let modalContainer = document.querySelector('#modal-container');
     modalContainer.classList.remove('is-visible');
   }
 
   window.addEventListener('keydown', (e) => {
     let modalContainer = document.querySelector('#modal-container');
     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-      hideModal();  
+      hideModal();
     }
   });
-  
-  document.querySelector('#modal-container'). addEventListener('click', (e) => {
-    modalContainer = document.querySelector('#modal-container');
-    (e.target === modalContainer); {   
+
+  document.querySelector('#modal-container').addEventListener('click', (e) => {
+    let modalContainer = document.querySelector('#modal-container');
+    if (e.target === modalContainer) {
       hideModal();
     }
   });
