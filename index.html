@@ -8,14 +8,6 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button id="show-modal"> Show modal</button>
-    <div id="modal-container">
-      <div class="modal">
-        <button class="modal-close">Close</button>
-        <h1>Modal title</h1>
-        <p>Modal text</p>
-      </div>
-    </div>
      <!-- Header including the logo and the main navigation-->
   <header class="page-header">  
     <a href="index.html" class="logo-link"> 
@@ -25,6 +17,15 @@
     <h1>Pokedex</h1>
     <!--Container for Pokemon list-->
     <ul class="pokemon-list"></ul>
+    <!-- Adding modals containier-->
+    <div id="modal-container">
+      <div class="modal">
+        <button class="modal-close">Close</button>
+        <h1 class="modal-title"></h1>
+        <img class="modal-img" scr="" alt="Pokemon image">
+        <p class="modal-details"></p>
+      </div>
+    </div>
 <!--Link to JavaScript files-->
    <strong>
     <script src="./js/promise-polyfill.js"></script>
