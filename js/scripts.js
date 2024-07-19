@@ -80,6 +80,23 @@ function showDetails(item) {
     modalTitle.empty();
     modalBody.empty();
 
+    //creating element for name in modal
+    let nameElement =$("<h1> + item.name + </h>");
+    //create modal content
+    let imageElementFront = $('<img class="modal-img" style="width:50%">');
+    imageElementFront.attr("scr", item.imageUrlFront);
+    let imageElementBack = $('<img class="modal-img" style="width:50%">')
+    imageElementBack.attr("src", item.imageUrlBack);
+    // Creating element for height in modal
+    let heightElement = $("<p>" + "height : " + item.height + "</p>");
+    //creating element for weight
+    let weightElement = $("<p" + "weight : " + item.weight + "</p>");
+    // Creating element for type in modal
+    let typesElement = $("<p>" + "types : " + item.types + "</p>");
+    // Creating abilities element
+    let abilitiesElement = $("<p>" + "abilities : " + item.abilities + "</p>");
+
+    
     // Add the new modal content
     let closeButtonElement = document.createElement('button');
     closeButtonElement.classList.add('modal-close');
