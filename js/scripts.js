@@ -96,7 +96,17 @@ function showDetails(item) {
     // Creating abilities element
     let abilitiesElement = $("<p>" + "abilities : " + item.abilities + "</p>");
 
-    
+    modalTitle.append(nameElement);
+    modalBody.append(imageElementFront);
+    modalBody.append(inamgeElementBack);
+    modalBody.append(heightElement);
+    modalBody.append(weightElement);
+    modalBody.append(typesElement);
+    modalBody.append(abilitiesElement);
+  }
+
+
+
     // Add the new modal content
     let closeButtonElement = document.createElement('button');
     closeButtonElement.classList.add('modal-close');
@@ -119,7 +129,7 @@ function showDetails(item) {
     modalContainer.appendChild(modal);
     
     modalContainer.classList.add('is-visible');
-  }
+  
   
   function hideModal() {
     let modalContainer = document.querySelector('#modal-container');
