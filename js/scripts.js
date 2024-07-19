@@ -138,4 +138,8 @@ function showDetails(item) {
     });
   });
 
+  $('[data-toggle="modal"]').on('click', function(){
+    let targetSelector = $(this).attr('data-target');
+    $(targetSelector).modal('show'); // Bootstrap’s own function to make the modal appear
+  });
   
