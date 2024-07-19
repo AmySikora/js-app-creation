@@ -26,9 +26,10 @@ function onClick(clickedButton, pokemon) {
 function addListItem (pokemon) {
   let pokemonListElement = document.querySelector('.pokemon-list');
   let listItem = document.createElement('li');
+  listItem.classList.add("btn", "btn-primary", "pokemon-card")
   let button = document.createElement('button');
   button.innerText = pokemon.name;
-  button.classList.add('pokemon-card');
+  button.classList.add('btn', 'btn-primary', 'pokemon-card');
   listItem.appendChild(button);
   pokemonListElement.appendChild(listItem);
   onClick(button, pokemon); 
@@ -72,39 +73,42 @@ function showDetails(item) {
 }
   
 // Add modal for Pokemen a
-  function showModal(item) {
+  function showModal(name, height, weight, types, abilities, imageUrl) {
     let modalBody = $(".modal-body");
     let modalTitle =$(".modal-title");
-    let modalHeader = $(".modal-header");
     
-    modalTitle.empty();
-    modalBody.empty();
+    modalTitle.innerHTML = '';
+    modalBody.innerHTML = '';
 
     //creating element for name in modal
-    let nameElement =$("<h1> + item.name + </h>");
-    //create modal content
-    let imageElementFront = $('<img class="modal-img" style="width:50%">');
-    imageElementFront.attr("scr", item.imageUrlFront);
-    let imageElementBack = $('<img class="modal-img" style="width:50%">')
-    imageElementBack.attr("src", item.imageUrlBack);
-    // Creating element for height in modal
-    let heightElement = $("<p>" + "height : " + item.height + "</p>");
-    //creating element for weight
-    let weightElement = $("<p" + "weight : " + item.weight + "</p>");
-    // Creating element for type in modal
-    let typesElement = $("<p>" + "types : " + item.types + "</p>");
-    // Creating abilities element
-    let abilitiesElement = $("<p>" + "abilities : " + item.abilities + "</p>");
-
-    modalTitle.append(nameElement);
-    modalBody.append(imageElementFront);
-    modalBody.append(inamgeElementBack);
-    modalBody.append(heightElement);
-    modalBody.append(weightElement);
-    modalBody.append(typesElement);
-    modalBody.append(abilitiesElement);
+    let nameElement = document.createElement('h1');
+    nameElement.innerText = name;
+  
+    let heightElement = document.createElement('p');
+    heightElement.innerText = height;
+  
+    let weightElement = document.createElement('p');
+    weightElement.innerText = weight;
+  
+    let typesElement = document.createElement('p');
+    typesElement.innerText = types;
+  
+    let abilitiesElement = document.createElement('p');
+    abilitiesElement.innerText = abilities;
+  
+    let imageElement = document.createElement('img');
+    imageElement.src = imageUrl;
+    imageElement.classList.add('img-fluid');
+  
+    modalTitle.appendChild(nameElement);
+    modalBody.appendChild(imageElement);
+    modalBody.appendChild(heightElement);
+    modalBody.appendChild(weightElement);
+    modalBody.appendChild(typesElement);
+    modalBody.appendChild(abilitiesElement);
+  
+    $('#pokemonModal').modal('show');
   }
-
 
 
     // Add the new modal content

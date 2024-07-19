@@ -28,24 +28,10 @@
         <img class="page-header__item" width="200" height="auto" src="img/Pokemon_Logo.jpg" alt="Pokemon logo">
      </a>
   </header>
-  <!-- Pokemon content-->
-    <!--Container for Pokemon list-->
-    <ul class="pokemon-list"></ul>
-    <!-- Adding modals containier-->
-    <div id="modal-container">
-      <div class="modal">
-        <button class="modal-close">Close</button>
-        <h1 class="modal-title"></h1>
-        <img class="modal-img" scr="" alt="Pokemon image">
-        <p class="modal-details"></p>
-      </div>
-    </div>
-  <!-- Bootstrap Modal-->
-  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-</button>
+   <!--Container for Pokemon list-->
+<ul class="pokemon-list list-group"></ul>
 
-<!-- Modal -->
+<!-- Bootstrap Modal -->
 <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -61,7 +47,7 @@
         <p id="pokemonWeight"></p>
         <p id="pokemonTypes"></p>
         <p id="pokemonAbilities"></p>
-        <img id="pokemonImage" scr="#" class="img-fluid" alt="Pokemon Image">
+        <img id="pokemonImage" src="#" class="img-fluid" alt="Pokemon Image">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
