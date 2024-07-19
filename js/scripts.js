@@ -72,12 +72,13 @@ function showDetails(item) {
 }
   
 // Add modal for Pokemen a
-  function showModal(title, text, imageUrl) {
-    let modalContainer = document.querySelector('#modal-container');
-   modalContainer.innerHTML = '';
-
-    let modal = document.createElement('div');
-    modal.classList.add('modal');
+  function showModal(item) {
+    let modalBody = $(".modal-body");
+    let modalTitle =$(".modal-title");
+    let modalHeader = $(".modal-header");
+    
+    modalTitle.empty();
+    modalBody.empty();
 
     // Add the new modal content
     let closeButtonElement = document.createElement('button');
