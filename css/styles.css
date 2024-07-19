@@ -1,53 +1,57 @@
-/* Adds style to body */
 body {
-    justify-content: center;
-    text-align: center;  
-    border: 1px solid rgb(91, 8, 233);
-    background-color: rgb(171, 229, 241);
-    font-family: "Press Start 2P", sans-serif;
-    margin: 0;
-    Padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(171, 229, 241);
+  font-family: "Press Start 2P", sans-serif;
 }
 
-/* Add style to Pokemon container */
+header.page-header {
+  margin-bottom: 20px;
+}
+
 .pokemon-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 20px 0;
-    border: 2px solid rgb(25, 25, 25); 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 1200px;
+  list-style-type: none;
 }
 
-/* Removes any default syles */
-.pokemon-list li {
-    list-style-type: none;
-}
-
-/* Adds style to Pokemon cards */
 .pokemon-card {
-    padding: 10px;
-    background-color: rgb(242, 190, 126);
-    border: 2px solid rgb(25, 25, 25);
-    border-radius: 15px;
-    box-shadow: 7px 7px 0px rgb(231, 103, 103);
-    margin: 5px;
-    width: 150px;
-    text-transform: capitalize; 
-    transition: transnform 0.2, box-shadow 0.2s;
+  padding: 10px;
+  background-color: rgb(242, 190, 126);
+  border: 2px solid rgb(25, 25, 25);
+  border-radius: 15px;
+  box-shadow: 7px 7px 0px rgb(231, 103, 103);
+  text-transform: capitalize;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
 }
 
-/* Shows hover pointer */
 .pokemon-card:hover {
-    cursor: pointer;
-    color: rgb(126, 11, 227);
-    transform: scale(1.05);
-    box-shadow: 10px 10px 0pxrgb(231, 103, 103);
+  cursor: pointer;
+  color: rgb(126, 11, 227);
+  transform: scale(1.05);
+  box-shadow: 10px 10px 0px rgb(231, 103, 103);
 }
 
-/*  Adds background color when clicked */
 .pokemon-card:active {
-    background-color: rgb(63, 63, 109);
+  background-color: rgb(63, 63, 109);
+}
+
+.pokemon-card button {
+  border: none;
+  background: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .modal-body {
@@ -57,7 +61,7 @@ body {
 .modal-body img {
   max-width: 100%;
   height: auto;
-  margin: 10px;
+  margin: 10px 0;
   border: 2px solid #dee2e6;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
