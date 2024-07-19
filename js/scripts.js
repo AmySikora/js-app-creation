@@ -3,7 +3,10 @@ let pokemonRepository = (function () {
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function add(pokemon) {
-    if (typeof pokemon === "object" && "name" in pokemon) {
+    if (
+      typeof pokemon === "object" &&
+      "name" in pokemon
+    ) {
       pokemonList.push(pokemon);
     } else {
       console.log("pokemon is not correct");
@@ -42,11 +45,10 @@ let pokemonRepository = (function () {
           detailsUrl: item.url
         };
         add(pokemon);
-        console.log(pokemon);
       });
     }).catch(function (e) {
       console.error(e);
-    });
+    })
   }
 
   function loadDetails(item) {
@@ -64,12 +66,6 @@ let pokemonRepository = (function () {
     });
   }
 
-  function showDetails(item) {
-    loadDetails(item).then(function () {
-      showModal(item.name, `Height: ${item.height}`, `Weight: ${item.weight}`, `Types: ${item.types}`, `Abilities: ${item.abilities}`, item.imageUrl);
-    });
-  }
-
   function showModal(name, height, weight, types, abilities, imageUrl) {
     let modalTitle = document.querySelector('.modal-title');
     let modalBody = document.querySelector('.modal-body');
@@ -81,16 +77,16 @@ let pokemonRepository = (function () {
     nameElement.innerText = name;
 
     let heightElement = document.createElement('p');
-    heightElement.innerText = height;
+    heightElement.innerText = `Height: ${height}`;
 
     let weightElement = document.createElement('p');
-    weightElement.innerText = weight;
+    weightElement.innerText = `Weight: ${weight}`;
 
     let typesElement = document.createElement('p');
-    typesElement.innerText = types;
+    typesElement.innerText = `Types: ${types}`;
 
     let abilitiesElement = document.createElement('p');
-    abilitiesElement.innerText = abilities;
+    abilitiesElement.innerText = `Abilities: ${abilities}`;
 
     let imageElement = document.createElement('img');
     imageElement.src = imageUrl;
@@ -104,6 +100,19 @@ let pokemonRepository = (function () {
     modalBody.appendChild(abilitiesElement);
 
     $('#pokemonModal').modal('show');
+  }
+
+  function showDetails(item) {
+    loadDetails(item).then(function () {
+      showModal(
+        item.name,
+        item.height,
+        item.weight,
+        item.types,
+        item.abilities,
+        item.imageUrl
+      );
+    });
   }
 
   return {
