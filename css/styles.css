@@ -1,46 +1,19 @@
-/* Navbar Styles */
-.navbar {
-  background-color: #007bff; /* Bootstrap primary color */
-}
 
+/* Style the navbar brand */
 .navbar-brand {
-  color: #fff; /* White text color for the brand */
-  font-weight: bold; /* Make brand text bold */
-}
-
-.navbar-brand:hover {
-  color: #e0e0e0; /* Light grey text color on hover */
-}
-
-.navbar-nav .nav-link {
-  color: #fff; /* White text color for nav links */
-  font-size: 1.1rem; /* Slightly larger text size */
-  margin-right: 20px; /* Space between nav items */
-}
-
-.navbar-nav .nav-link:hover {
-  color: #e0e0e0; /* Light grey text color on hover */
-}
-
-.navbar-toggler-icon {
-  background-image: url('data:image/svg+xml,...'); /* You can customize this icon if needed */
-}
-
-@media (max-width: 767.98px) {
-  .navbar-nav {
-    text-align: center; /* Center nav links on small screens */
-  }
-
-  .navbar-nav .nav-link {
-    margin: 10px 0; /* Space between nav items on small screens */
-  }
+  color: rgb(23, 8, 233); /* Match font color with the rest of the page */
+  font-size: 2rem; /* Adjust font size to match the rest of the page */
+  font-family: "Press Start 2P", sans-serif; /* Match the font family */
+  text-align: center; /* Center align text */
+  display: block; /* Ensures the brand text takes up the available width */
+  margin: 0 auto; /* Center the brand horizontally */
+  padding: 25;
 }
 body {
-  justify-content: center;
   text-align: center;
   border: 1px solid rgb(91, 8, 233);
   background-color: rgb(171, 229, 241);
-  font-family: "Press Start 2P", sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
 }
