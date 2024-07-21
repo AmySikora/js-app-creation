@@ -57,6 +57,7 @@ let pokemonRepository = (function () {
     }
     return false;
   }
+
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
@@ -143,7 +144,8 @@ let pokemonRepository = (function () {
 })();
 
 pokemonRepository.loadList().then(function () {
-  pokemonRepository.getAll().forEach(function (pokemon) {
+  let sortedPokemon = pokemonRepository.getAll().sort((a, b) => a.weight - b.weight);
+  sortedPokemon.forEach(function (pokemon) {
     pokemonRepository.loadDetails(pokemon);
   });
 });
