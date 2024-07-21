@@ -1,82 +1,100 @@
-/* Style the navbar brand */
-.navbar-brand {
-  color: rgb(23, 8, 233); /* Match font color with the rest of the page */
-  font-size: 2rem; /* Adjust font size to match the rest of the page */
-  font-family: "Press Start 2P", sans-serif; /* Match the font family */
-  text-align: center; /* Center align text */
-  display: block; /* Ensures the brand text takes up the available width */
-  margin: 0 auto; /* Center the brand horizontally */
-  padding: 25;
-}
+/* General page styling */
 body {
+  padding-top: 70px;
+  background-color: #f8f9fa;
+}
+
+/* Navbar styling */
+.navbar-brand {
+  font-size: 2rem;
   text-align: center;
-  border: 1px solid rgb(91, 8, 233);
-  background-color: rgb(171, 229, 241);
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  color: #ffcb05 !important;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header styling */
+.page-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-header img {
+  width: 300px;
+  height: auto;
+}
+
+/* Pokemon list styling */
+.pokemon-category {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.pokemon-category h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .pokemon-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
   padding: 0;
-  margin: 20px;
-  list-style-type: none;
+  margin: 0 auto;
+  list-style: none;
+  max-width: 600px;
 }
 
-.pokemon-card {
-  padding: 10px;
-  background-color: rgb(242, 190, 126);
-  border: 2px solid rgb(25, 25, 25);
-  border-radius: 15px;
-  box-shadow: 7px 7px 0px rgb(231, 103, 103);
-  text-transform: capitalize;
-  transition: transform 0.2s, box-shadow 0.2s;
+.pokemon-list .list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  margin-bottom: 10px;
+  border-radius: 0.25rem;
 }
 
-.pokemon-card:hover {
-  cursor: pointer;
-  color: rgb(126, 11, 227);
-  transform: scale(1.05);
-  box-shadow: 10px 10px 0px rgb(231, 103, 103);
+.pokemon-list .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #ffcb05;
+  color: #2a75bb;
+  font-weight: bold;
 }
 
-.pokemon-card:active {
-  background-color: rgb(63, 63, 109);
+.pokemon-list .btn img {
+  margin-right: 10px;
 }
 
-.modal-body {
-  text-align: center;
-}
-
-.modal-body img {
-  max-width: 100%;
-  height: auto;
-  margin: 10px 0;
-  border: 2px solid #dee2e6;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.modal-body p {
-  margin: 5px 0;
-  font-size: 1.2rem;
-  color: #495057;
+/* Modal styling */
+.modal-title {
+  font-size: 2rem;
+  color: #2a75bb;
 }
 
 .modal-body h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.75rem;
+  color: #ffcb05;
+  text-align: center;
+}
+
+.modal-body p {
+  font-size: 1rem;
   color: #343a40;
 }
 
-.pokemon-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin: 20px auto;
-  max-width: 1200px;
-  list-style-type: none;
+.modal-body img {
+  display: block;
+  margin: 0 auto 15px;
+}
+
+/* Ensuring navbar brand text is centered */
+.navbar .navbar-collapse {
+  display: flex;
+  justify-content: center;
 }
