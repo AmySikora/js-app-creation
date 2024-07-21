@@ -93,6 +93,12 @@ body {
   margin: 0 auto 15px;
 }
 
+/*adding h2 styles to make sure there is space for titles*/
+.category-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 /* Ensuring navbar brand text is centered */
 .navbar .navbar-collapse {
   display: flex;
