@@ -8,7 +8,6 @@ body {
 .navbar-brand {
   font-size: 2rem;
   text-align: center;
-  width: 100%;
   color: #ffcb05 !important;
   font-family: 'Arial', sans-serif;
 }
@@ -61,9 +60,9 @@ body {
   justify-content: center;
   background-color: #ffffff;
   border: 1px solid #dee2e6;
-  margin-bottom: 10px;
+  margin: 10px;
   border-radius: 0.25rem;
-  width: calc(20% - 20px);
+  width: calc(20% - 20px); /* Five buttons per row */
 }
 
 .pokemon-list .btn {
@@ -106,10 +105,4 @@ body {
 .category-title {
   margin-top: 20px;
   margin-bottom: 10px;
-}
-
-/* Ensuring navbar brand text is centered */
-.navbar .navbar-collapse {
-  display: flex;
-  justify-content: center;
 }

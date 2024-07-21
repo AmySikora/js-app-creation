@@ -46,7 +46,7 @@ let pokemonRepository = (function () {
   
     onClick(button, pokemon);
   }  
-  
+
   function pokemonExistsInList(pokemon, categoryElement) {
     // Check if any button in the list already has the same pokemon name
     let buttons = categoryElement.querySelectorAll('.btn span');
@@ -68,11 +68,10 @@ let pokemonRepository = (function () {
           detailsUrl: item.url
         };
         add(pokemon);
-        console.log(pokemon);
       });
     }).catch(function (e) {
       console.error(e);
-    })
+    });
   }
 
   function loadDetails(item) {
@@ -139,7 +138,7 @@ let pokemonRepository = (function () {
     getAll: getAll,
     loadList: loadList,
     loadDetails: loadDetails,
-    showDetails: showDetails,
+    showDetails: showDetails
   };
 })();
 
