@@ -7,8 +7,6 @@ body {
 /* Navbar styling */
 .navbar-brand {
   font-size: 2rem;
-  text-align: center;
-  width: 100%;
   color: #ffcb05 !important;
   font-family: 'Arial', sans-serif;
 }
@@ -44,23 +42,17 @@ body {
   padding: 0;
   margin: 0 auto;
   list-style: none;
-  max-width: 600px;
 }
 
 .pokemon-list .list-group-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #ffffff;
   border: 1px solid #dee2e6;
   margin-bottom: 10px;
   border-radius: 0.25rem;
+  text-align: center;
 }
 
 .pokemon-list .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   background-color: #ffcb05;
   color: #2a75bb;
@@ -93,7 +85,7 @@ body {
   margin: 0 auto 15px;
 }
 
-/* Ensuring navbar brand text is centered */
+/* Ensure navbar brand text is centered */
 .navbar .navbar-collapse {
   display: flex;
   justify-content: center;
