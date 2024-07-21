@@ -18,6 +18,11 @@ body {
   margin-right: auto;
 }
 
+.navbar .navbar-collapse {
+  display: flex;
+  justify-content: center;
+}
+
 /* Header styling */
 .page-header {
   text-align: center;
@@ -44,7 +49,10 @@ body {
   padding: 0;
   margin: 0 auto;
   list-style: none;
-  max-width: 600px;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .pokemon-list .list-group-item {
@@ -55,6 +63,7 @@ body {
   border: 1px solid #dee2e6;
   margin-bottom: 10px;
   border-radius: 0.25rem;
+  width: calc(20% - 20px);
 }
 
 .pokemon-list .btn {
