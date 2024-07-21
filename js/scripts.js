@@ -31,7 +31,7 @@ let pokemonRepository = (function () {
       return;
     }
     let listItem = document.createElement('li');
-    listItem.classList.add('list-group-item');
+    listItem.classList.add('list-group-item', 'col-12', 'col-md-4');
 
     let button = document.createElement('button');
     button.innerHTML = `
