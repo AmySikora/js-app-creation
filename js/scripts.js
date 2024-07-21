@@ -25,6 +25,11 @@ let pokemonRepository = (function () {
 
   function addListItem(pokemon, sizeCategory) {
     let categoryElement = document.querySelector(`#${sizeCategory} .pokemon-list`);
+    //Check to see if Pokemmon is already listed 
+    if (pokemonExistsInList(pokemon, categoryElement)) {
+      console.log('Pokemon ${pokemon.name} is already on the list');
+      return;
+    }
     let listItem = document.createElement('li');
     listItem.classList.add('list-group-item');
 
@@ -40,6 +45,16 @@ let pokemonRepository = (function () {
     onClick(button, pokemon);
   }
 
+  function pokemonExistsInList(pokemon, catergoryElement) {
+    //Checks to see if any button on the list has teh same name
+    let buttons = catergoryElement.querySelectorAll('.btn span');
+    for (let i = 0; i < buttons.length; i++) {
+      if (buttons[i].textContent === pokemonExistsInList.name) {
+        return true;
+      }
+    }
+    return false;
+  }
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
