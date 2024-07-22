@@ -62,7 +62,12 @@ body {
   border: 1px solid #dee2e6;
   margin: 10px;
   border-radius: 0.25rem;
-  width: calc(20% - 20px); /* Five buttons per row */
+  width: calc(16.66667% - 20px); /* Six items per row */
+  max-width: 200px; /* Optional max-width for each item */
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  font-size: 14px;
 }
 
 .pokemon-list .btn {
@@ -86,6 +91,14 @@ body {
 @media (max-width: 768px) {
   .pokemon-list.btn {
     width: calc(33.33% - 20px);
+    font-size: 12px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pokemon-list .list-group-item {
+    width: calc(33.33% - 20px); /* Three items per row on smaller screens */
     font-size: 12px;
     padding: 15px;
   }

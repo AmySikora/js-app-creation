@@ -3,10 +3,7 @@ let pokemonRepository = (function () {
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function add(pokemon) {
-    if (
-      typeof pokemon === "object" &&
-      "name" in pokemon
-    ) {
+    if (typeof pokemon === "object" && "name" in pokemon) {
       pokemonList.push(pokemon);
     } else {
       console.log("pokemon is not correct");
@@ -26,30 +23,25 @@ let pokemonRepository = (function () {
   function addListItem(pokemon, sizeCategory) {
     let categoryElement = document.querySelector(`#${sizeCategory} .pokemon-list`);
   
-    // Check if pokemon already exists in the list
-    if (pokemonExistsInList(pokemon, categoryElement)) {
-      console.log(`Pokemon ${pokemon.name} already exists in the list.`);
-      return;
-    }
-  
+    // Create list item and button
     let listItem = document.createElement('li');
     listItem.classList.add('list-group-item');
   
     let button = document.createElement('button');
-    button.classList.add('btn', 'btn-primary', 'btn-block', 'text-center', 'd-flex', 'flex-column', 'align-items-center');
-    button.setAttribute('data-target', '#pokemonModal');
-    button.setAttribute('data-toggle', 'modal');
+    button.classList.add('btn', 'btn-primary', 'btn-block', 'text-center', 'd-flex', 'flex-column', 'align-items-center'); // Adjusted classes
     button.innerHTML = `
       <img src="${pokemon.imageUrl}" alt="${pokemon.name}" class="img-fluid" style="width: 50px; height: 50px;">
       <span>${pokemon.name}</span>
     `;
     listItem.appendChild(button);
+  
+    // Append to the correct category element
     categoryElement.appendChild(listItem);
   
+    // Attach click event
     onClick(button, pokemon);
-  }
+  }  
   
-
   function pokemonExistsInList(pokemon, categoryElement) {
     // Check if any button in the list already has the same pokemon name
     let buttons = categoryElement.querySelectorAll('.btn span');
@@ -79,21 +71,24 @@ let pokemonRepository = (function () {
 
   function loadDetails(item) {
     let url = item.detailsUrl;
-    return fetch(url).then(function (response) {
-      return response.json();
-    }).then(function (details) {
-      item.imageUrl = details.sprites.front_default;
-      item.height = details.height;
-      item.types = details.types.map(typeInfo => typeInfo.type.name).join(', ');
-      item.weight = details.weight;
-      item.abilities = details.abilities.map(abilityInfo => abilityInfo.ability.name).join(', ');
-
-      let sizeCategory = getSizeCategory(item.height);
-      addListItem(item, sizeCategory);
-    }).catch(function (e) {
-      console.error(e);
-    });
-  }
+    return fetch(url)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (details) {
+        item.imageUrl = details.sprites.front_default;
+        item.height = details.height;
+        item.types = details.types.map(typeInfo => typeInfo.type.name).join(', ');
+        item.weight = details.weight;
+        item.abilities = details.abilities.map(abilityInfo => abilityInfo.ability.name).join(', ');
+  
+        let sizeCategory = getSizeCategory(item.height); // Determine size category
+        addListItem(item, sizeCategory); // Add item to the correct category
+      })
+      .catch(function (e) {
+        console.error(e);
+      });
+  }  
 
   function getSizeCategory(height) {
     if (height < 10) {
