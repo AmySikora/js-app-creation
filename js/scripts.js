@@ -33,19 +33,20 @@ let pokemonRepository = (function () {
     }
   
     let listItem = document.createElement('li');
-    listItem.classList.add('list-group-item'); 
+    listItem.classList.add('list-group-item');
   
     let button = document.createElement('button');
+    button.classList.add('btn', 'btn-primary', 'btn-block', 'text-center', 'd-flex', 'flex-column', 'align-items-center'); // Adjusted classes
     button.innerHTML = `
       <img src="${pokemon.imageUrl}" alt="${pokemon.name}" class="img-fluid" style="width: 50px; height: 50px;">
       <span>${pokemon.name}</span>
     `;
-    button.classList.add('btn', 'btn-primary', 'btn-block', 'text-left', 'd-flex', 'align-items-center');
     listItem.appendChild(button);
     categoryElement.appendChild(listItem);
   
     onClick(button, pokemon);
-  }  
+  }
+  
 
   function pokemonExistsInList(pokemon, categoryElement) {
     // Check if any button in the list already has the same pokemon name
