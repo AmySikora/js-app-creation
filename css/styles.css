@@ -1,7 +1,7 @@
 /* General page styling */
 body {
   padding-top: 70px;
-  background-color: #f8f9fa;
+  background-color: #f5f6d4;
 }
 
 /* Navbar styling */
@@ -101,6 +101,11 @@ body {
     padding: 15px;
   }
 }
+
+.container {
+  background-color: rgb(247, 247, 244);
+}
+
 .pokemon-list .btn:hover{
   background-color: #c3cdd8;
 }
