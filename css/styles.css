@@ -102,10 +102,6 @@ body {
   }
 }
 
-.container {
-  background-color: rgb(247, 247, 244);
-}
-
 .pokemon-list .btn:hover{
   background-color: #c3cdd8;
 }
