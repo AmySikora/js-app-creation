@@ -31,13 +31,14 @@ body {
 .page-header {
   text-align: center;
   margin-bottom: 30px;
+
 }
 
 .page-header img {
-  width: 70%;
+  width: 25%;
   height: auto;
   display: block;
-  padding-left: 0 auto;
+  margin: 0 auto;
 }
 
 /* Pokemon list styling */
@@ -88,22 +89,23 @@ body {
   background-color: #2189f2;
   border: 1px solid #ced4da;
   border-radius: 10px;
-  padding: 10px;
-  width: 150px; /* Adjust width of the button */
-  height: 200px; /* Adjust height of the button */
+  width: 125px; /* Adjust width of the button */
+  height: 210px; /* Adjust height of the button */
   text-align: center;
+  color: #ffcb05;
+  text-shadow: #010911;
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center contents vertically */
   align-items: center; /* Center contents horizontally */
-  color: rgb(241, 235, 72);
+  box-shadow: #343a40;
 }
 
 .pokemon-category .pokemon-list .btn img {
-  width: 80%; /* Use full width of the button */
+  width: 200%; /* Use full width of the button */
   height: auto; /* Maintain aspect ratio */
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 
@@ -116,18 +118,17 @@ body {
 }
 
 @media (max-width: 768px) {
-  .pokemon-list.btn {
-    width: calc(33.33% - 20px);
-    font-size: 12px;
-    padding: 15px;
+  .pokemon-category .pokemon-list.btn {
+  width: calc(50% - 20px);
+  height: 200px;
+  margin: 10px;
   }
 }
 
 @media (max-width: 768px) {
-  .pokemon-list .list-group-item {
-    width: calc(33.33% - 20px); /* Three items per row on smaller screens */
-    font-size: 12px;
-    padding: 15px;
+  .pokemon-category .pokemon-list .list-group-item {
+    width: 100%; /* Three items per row on smaller screens */
+    margin: 10px;
   }
 }
 
