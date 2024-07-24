@@ -1,0 +1,145 @@
+body {
+    padding-top: 70px;
+    background-color: #f5f6d4;
+  }
+  
+  .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .navbar-brand {
+    font-size: 2rem;
+    text-align: center;
+    color: #ffcb05;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .navbar .navbar-collapse {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .category-title {
+    margin-top: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 30px;
+  
+    img {
+      width: 25%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  
+  .pokemon-category {
+    margin-bottom: 50px;
+    text-align: center;
+  
+    .pokemon-list {
+      padding: 0;
+      margin: 0 auto;
+      list-style: none;
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+  
+      .list-group-item {
+        background-color: #ffffff;
+        border: 1px solid #dee2e6;
+        margin: 10px;
+        border-radius: 0.25rem;
+        width: calc(16.66667% - 20px);
+        max-width: 200px;
+        text-align: center;
+        white-space: normal;
+        word-wrap: break-word;
+        font-size: 14px;
+      }
+  
+      .btn {
+        background-color: #2189f2;
+        border: 1px solid #ced4da;
+        border-radius: 10px;
+        width: 125px;
+        height: 210px;
+        text-align: center;
+        color: #ffcb05;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          margin-bottom: 5px;
+        }
+  
+        span {
+          font-weight: bold;
+          text-transform: capitalize;
+          display: block;
+          text-align: center;
+          margin-bottom: 5px;
+        }
+      }
+  
+      @media (max-width: 768px) {
+        .btn {
+          width: calc(50% - 20px);
+          height: 200px;
+          margin: 10px;
+        }
+      }
+  
+      @media (max-width: 768px) {
+        .list-group-item {
+          width: 100%;
+          margin: 10px;
+        }
+      }
+  
+      .btn:hover {
+        background-color: #c3cdd8;
+      }
+    }
+  }
+  
+  .modal-title {
+    font-size: 2rem;
+    color: #2a75bb;
+  }
+  
+  .modal-body {
+    h1 {
+      font-size: 1.75rem;
+      color: #ffcb05;
+      text-align: center;
+    }
+  
+    p {
+      font-size: 1rem;
+      color: #343a40;
+    }
+  
+    img {
+      display: block;
+      margin: 0 auto 15px;
+    }
+  }
+  
