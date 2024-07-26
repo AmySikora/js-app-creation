@@ -22,11 +22,15 @@ let pokemonRepository = (function () {
 
   function addListItem(pokemon, sizeCategory) {
     let categoryElement = document.querySelector(`#${sizeCategory} .pokemon-list`);
-  
+    if (!categoryElement) {
+      console.error(`Category element #${sizeCategory} .pokemon-list not found.`);
+      return;
+    }
+
     // Create list item and button
     let listItem = document.createElement('li');
     listItem.classList.add('list-group-item');
-  
+
     let button = document.createElement('button');
     button.classList.add('btn', 'btn-primary', 'btn-block', 'text-center', 'd-flex', 'flex-column', 'align-items-center'); // Adjusted classes
     button.innerHTML = `
@@ -34,14 +38,14 @@ let pokemonRepository = (function () {
       <span>${pokemon.name}</span>
     `;
     listItem.appendChild(button);
-  
+
     // Append to the correct category element
     categoryElement.appendChild(listItem);
-  
+
     // Attach click event
     onClick(button, pokemon);
-  }  
-  
+  }
+
   function pokemonExistsInList(pokemon, categoryElement) {
     // Check if any button in the list already has the same pokemon name
     let buttons = categoryElement.querySelectorAll('.btn span');
@@ -81,14 +85,14 @@ let pokemonRepository = (function () {
         item.types = details.types.map(typeInfo => typeInfo.type.name).join(', ');
         item.weight = details.weight;
         item.abilities = details.abilities.map(abilityInfo => abilityInfo.ability.name).join(', ');
-  
+
         let sizeCategory = getSizeCategory(item.height); // Determine size category
         addListItem(item, sizeCategory); // Add item to the correct category
       })
       .catch(function (e) {
         console.error(e);
       });
-  }  
+  }
 
   function getSizeCategory(height) {
     if (height < 10) {
