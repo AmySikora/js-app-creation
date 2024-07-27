@@ -24,16 +24,14 @@ body {
 /* Adding space for titles */
 .category-title {
   margin-top: 80px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 /* Header styling */
 .page-header {
   text-align: center;
   margin-bottom: 30px;
-
 }
-
 .page-header img {
   width: 25%;
   height: auto;
@@ -98,7 +96,6 @@ body {
   margin-bottom: 5px;
 }
 
-
 .pokemon-category .pokemon-list .btn span {
   font-weight: bold;
   text-transform: capitalize;
@@ -108,18 +105,19 @@ body {
 }
 
 @media (max-width: 768px) {
-  .pokemon-category .pokemon-list.btn {
-  width: calc(50% - 20px);
-  height: 200px;
-  margin: 10px;
-}
   .pokemon-category .pokemon-list .list-group-item {
-    width: 100%; 
+    width: calc(50% - 20px); 
     margin: 10px;
+  }
+  .pokemon-category .pokemon-list .btn {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 10px;
   }
 }
 
-.pokemon-category .pokemon-list .btn:hover{
+.pokemon-category .pokemon-list .btn:hover {
   background-color: #c3cdd8;
 }
 
@@ -144,4 +142,3 @@ body {
   display: block;
   margin: 0 auto 15px;
 }
-
