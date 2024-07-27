@@ -122,6 +122,10 @@ body {
 }
 
 /* Modal styling */
+.modal-content {
+  background-color:#f5f6d4;
+}
+
 .modal-title {
   font-size: 2rem;
   color: #2a75bb;
@@ -131,6 +135,7 @@ body {
   font-size: 1.75rem;
   color: #ffcb05;
   text-align: center;
+  text-transform:capitalize;
 }
 
 .modal-body p {
