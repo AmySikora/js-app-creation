@@ -31,7 +31,7 @@ body{padding-top:70px;background-color:#f5f6d4}
 .pokemon-category .pokemon-list .btn:hover{background-color:#c3cdd8}
 
 /* Modal styling */
-.modal-content{background-color: #f5f6d4;}
+.modal-content{background-color: #f1f2de;}
 .modal-title{font-size:2rem;color:#2a75bb}
 .modal-body h1{font-size:1.75rem;color:#ffcb05;text-align:center;text-transform:capitalize}
 .modal-body p{font-size:1rem;color:#343a40}
