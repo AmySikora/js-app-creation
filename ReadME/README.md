@@ -19,7 +19,6 @@ This application loads Pokémon data from an external API using AJAX and display
 - **NavBar:** Allows users to select Pokémon by size and scroll them to the selected size category
 - **Responsive design:** Can be used with a variety of different sceen sizes
 
-
 ## Technologies
 This application is built using the following technologies:
 - HTML
