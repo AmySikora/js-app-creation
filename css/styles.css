@@ -20,60 +20,75 @@ body {
   background-color: #f5f6d4;
 }
 
-/* Navbar styling */
-/* Navbar Styling */
+/* General Navbar Styling */
 .custom-navbar {
-  background-color: white;
-  border-bottom: 4px solid #007bff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px 30px;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  background-color: #ffffff; /* White background */
+  border-bottom: 4px solid #2a75bb; /* Blue bottom border */
+  padding: 10px 0;
 }
 
 .navbar-brand img {
-  height: 100px; /* Increase the logo size */
-  width: auto;
+  height: 70px;
 }
 
-.navbar-title {
-  font-size: 2rem;
-  color: #007bff;
+.navbar-toggler {
+  background-color: transparent;
+  border: none;
+}
+
+.navbar-toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #2a75bb; /* Blue color for the lines */
+  display: block;
+  position: relative;
+  margin: 5px auto;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: #2a75bb; /* Blue color for the lines */
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -10px;
+}
+
+.navbar-toggler-icon::after {
+  top: 10px;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-nav .nav-link {
+  color: #2a75bb; /* Blue text */
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
-.nav-link {
-  color: #007bff !important;
-  font-weight: bold;
-  font-size: 1.25rem; /* Increase font size for links */
+.navbar-nav .nav-link:hover {
+  color: #ffcb05; /* Yellow hover effect */
 }
 
-.nav-link:hover {
-  color: #0056b3 !important;
+/* Pokemon Categories */
+.pokemon-category {
+  margin-top: 150px; /* Ensure space below navbar */
 }
 
-/* Category Title Styling */
 .category-title {
-  font-size: 2rem;
   text-align: center;
-  color: #007bff; /* Blue font */
-  margin-top: 120px;
-  font-weight: bold;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .navbar-brand img {
-    height: 80px; /* Smaller logo for mobile */
-  }
-
-  .nav-link {
-    font-size: 1rem;
-  }
+  font-size: 2rem;
+  color: #2a75bb;
+  margin-bottom: 20px;
 }
 
 /* Pokemon list styling */
