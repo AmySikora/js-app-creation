@@ -1,3 +1,19 @@
+/* Title Styling */
+.pokedex-title {
+  font-family: 'Pokemon', Arial, sans-serif; /* Use a fun, Pokémon-inspired font if available */
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold;
+  color: #ffcb05; /* Bright yellow */
+  text-shadow: 
+    -2px -2px 0 #2a75bb, /* Blue outline */
+    2px -2px 0 #2a75bb,
+    -2px 2px 0 #2a75bb,
+    2px 2px 0 #2a75bb,
+    4px 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 /* General page styling */
 body {
   padding-top: 70px;
@@ -40,7 +56,6 @@ body {
 }
 
 /* Pokemon list styling */
-/* General card styling */
 .pokemon-category .pokemon-list .btn {
   background-color: #2189f2; /* Blue background */
   border: none; /* Remove border */
