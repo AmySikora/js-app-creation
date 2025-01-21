@@ -40,68 +40,51 @@ body {
 }
 
 /* Pokemon list styling */
-.pokemon-category {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.pokemon-category h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.pokemon-list {
-  padding: 0;
-  margin: 0 auto;
-  list-style: none;
-  max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.pokemon-category .pokemon-list .list-group-item {
-  background-color: #ffffff;
-  border: 1px solid #dee2e6;
-  margin: 10px;
-  border-radius: 0.25rem;
-  width: calc(16.66667% - 20px); 
-  max-width: 200px; 
-  text-align: center;
-  white-space: normal;
-  word-wrap: break-word;
-  font-size: 14px;
-}
-
+/* General card styling */
 .pokemon-category .pokemon-list .btn {
-  background-color: #2189f2;
-  border: 1px solid #ced4da;
-  border-radius: 10px;
-  width: 125px; 
-  height: 210px; 
-  text-align: center;
-  color: #ffcb05;
-  text-shadow: #010911;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #2189f2; /* Blue background */
+  border: none; /* Remove border */
+  border-radius: 10px; /* Rounded corners */
+  width: 150px; /* Set card width */
+  height: 220px; /* Set card height */
+  color: #ffcb05; /* Yellow text */
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  margin: 15px; /* Space between cards */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.pokemon-category .pokemon-list .btn:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: #186bc0; /* Darker blue on hover */
 }
 
 .pokemon-category .pokemon-list .btn img {
-  width: 100%; 
-  height: auto; 
-  display: block;
-  margin-bottom: 5px;
+  width: 80px; /* Set image width */
+  height: 80px; /* Set image height */
+  margin-bottom: 10px; /* Space below the image */
+  object-fit: contain; /* Prevent image distortion */
 }
 
 .pokemon-category .pokemon-list .btn span {
-  font-weight: bold;
-  text-transform: capitalize;
-  display: block;
-  text-align: center;
-  margin-bottom: 5px;
+  font-weight: bold; /* Bold text */
+  font-size: 16px; /* Adjust text size */
+  text-align: center; /* Center text */
+  text-transform: capitalize; /* Capitalize Pokémon names */
+}
+
+/* Ensure proper alignment within the list */
+.pokemon-list {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Wrap items to next line */
+  justify-content: center; /* Center items */
+  padding: 0; /* Remove padding */
+  margin: 0 auto; /* Center the list */
+  list-style: none; /* Remove default list styling */
 }
 
 @media (max-width: 768px) {
