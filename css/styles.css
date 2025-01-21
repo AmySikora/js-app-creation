@@ -16,7 +16,7 @@
 
 /* General page styling */
 body {
-  padding-top: 70px;
+  padding-top: 120px;
   background-color: #f5f6d4;
 }
 
@@ -61,7 +61,7 @@ body {
   font-size: 2rem;
   text-align: center;
   color: #007bff; /* Blue font */
-  margin-top: 40px;
+  margin-top: 120px;
   font-weight: bold;
 }
 
