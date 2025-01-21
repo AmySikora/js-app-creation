@@ -21,38 +21,59 @@ body {
 }
 
 /* Navbar styling */
-.navbar-nav {
-  margin-left: auto;
-  margin-right: auto;
+/* Navbar Styling */
+.custom-navbar {
+  background-color: white;
+  border-bottom: 4px solid #007bff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
 }
+
 .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-brand img {
+  height: 100px; /* Increase the logo size */
+  width: auto;
+}
+
+.navbar-title {
+  font-size: 2rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #007bff !important;
+  font-weight: bold;
+  font-size: 1.25rem; /* Increase font size for links */
+}
+
+.nav-link:hover {
+  color: #0056b3 !important;
+}
+
+/* Category Title Styling */
+.category-title {
   font-size: 2rem;
   text-align: center;
-  color: #ffcb05;
-  font-family: 'Arial', sans-serif;
+  color: #007bff; /* Blue font */
+  margin-top: 40px;
+  font-weight: bold;
 }
 
-.navbar .navbar-collapse {
-  display: flex;
-  justify-content: center;
-}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 80px; /* Smaller logo for mobile */
+  }
 
-/* Adding space for titles */
-.category-title {
-  margin-top: 80px;
-  margin-bottom: 10px;
-}
-
-/* Header styling */
-.page-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.page-header img {
-  width: 25%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  .nav-link {
+    font-size: 1rem;
+  }
 }
 
 /* Pokemon list styling */
